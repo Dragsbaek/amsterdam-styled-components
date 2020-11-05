@@ -11,7 +11,7 @@ export interface ThemeProviderProps {
   children: ReactNode
 }
 
-const ThemeProvider: React.FC<ThemeProviderProps> = ({
+const ThemeProvider: React.FunctionComponent<ThemeProviderProps> = ({
   theme: defaultTheme = ascDefaultTheme,
   overrides,
   deep = true,

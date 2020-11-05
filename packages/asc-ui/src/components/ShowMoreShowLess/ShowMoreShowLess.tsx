@@ -5,7 +5,7 @@ import ShowMoreShowLessStyle, {
   ShowMoreShowLessProps,
 } from './ShowMoreShowLessStyle'
 
-const ShowMoreShowLess: React.FC<
+const ShowMoreShowLess: React.FunctionComponent<
   ShowMoreShowLessProps & React.HTMLAttributes<HTMLElement>
 > = ({
   children,

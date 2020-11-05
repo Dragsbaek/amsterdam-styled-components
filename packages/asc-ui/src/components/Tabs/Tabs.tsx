@@ -42,7 +42,7 @@ function formatPanelId(id: string) {
   return `panel-${id}`
 }
 
-export const Tabs: React.FC<
+export const Tabs: React.FunctionComponent<
   TabsProps & React.HTMLAttributes<HTMLDivElement>
 > = ({ label, children, initialTab, className }) => {
   const allTabs = children.map(({ props }) => props.id)

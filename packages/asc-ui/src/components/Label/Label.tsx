@@ -8,7 +8,9 @@ type Props = {
   noActiveState?: boolean // Temporary solution to make the active state on the label optional, as there is nothing specified in design system. Needs to be discussed with design.
 } & StyleProps
 
-const Label: React.FC<Props & React.LabelHTMLAttributes<HTMLLabelElement>> = ({
+const Label: React.FunctionComponent<
+  Props & React.LabelHTMLAttributes<HTMLLabelElement>
+> = ({
   children: childrenProps,
   label,
   disabled,

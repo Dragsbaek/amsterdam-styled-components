@@ -13,11 +13,9 @@ const StyledHeading = styled(Heading)`
   color: ${themeColor('primary', 'main')};
 `
 
-const FilterBox: React.FC<Props & React.HTMLAttributes<HTMLElement>> = ({
-  children,
-  label,
-  ...otherProps
-}) => (
+const FilterBox: React.FunctionComponent<
+  Props & React.HTMLAttributes<HTMLElement>
+> = ({ children, label, ...otherProps }) => (
   <FilterBoxStyle {...otherProps}>
     <FilterBoxHeader>
       <StyledHeading forwardedAs="h3">{label}</StyledHeading>

@@ -11,7 +11,7 @@ import LinkStyle, {
 
 export type Props = LinkStyleProps & StyledProps<any>
 
-const Link: React.FC<Props> = ({
+const Link: React.FunctionComponent<Props> = ({
   children,
   variant,
   as,

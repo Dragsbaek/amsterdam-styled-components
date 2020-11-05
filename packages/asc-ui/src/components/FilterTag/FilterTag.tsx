@@ -6,7 +6,7 @@ import FilterTagStyle from './FilterTagStyle'
 
 export type FilterTagProps = TagProps
 
-const FilterTag: React.FC<
+const FilterTag: React.FunctionComponent<
   FilterTagProps & React.ButtonHTMLAttributes<HTMLButtonElement>
 > = ({ children, ...otherProps }) => (
   <FilterTagStyle {...otherProps}>

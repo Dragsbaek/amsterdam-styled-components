@@ -4,7 +4,7 @@ import MenuContext from '../MenuContext'
 import BackDrop, { Props as BackDropProps } from '../../BackDrop/BackDrop'
 import useDebounce from '../../../utils/hooks/useDebounce'
 
-const MenuInline: React.FC<Props & BackDropProps> = ({
+const MenuInline: React.FunctionComponent<Props & BackDropProps> = ({
   children,
   onExpand,
   hasBackDrop,

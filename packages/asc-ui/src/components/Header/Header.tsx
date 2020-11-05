@@ -15,13 +15,13 @@ type Props = {
   title?: string
   navigation?: React.ReactNode
   links?: React.ReactNode
-  logo?: React.FC<LogoProps>
+  logo?: React.FunctionComponent<LogoProps>
 } & HeaderWrapperProps &
   HeaderStyleProps &
   CustomCssPropsType &
   React.HTMLAttributes<HTMLDivElement>
 
-const Header: React.FC<Props> = ({
+const Header: React.FunctionComponent<Props> = ({
   css,
   title,
   homeLink,

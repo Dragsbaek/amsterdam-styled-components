@@ -14,7 +14,11 @@ type Props = {
   label: string
 } & MenuFlyOutProps
 
-const MenuFlyOut: React.FC<Props> = ({ children, label, ...otherProps }) => {
+const MenuFlyOut: React.FunctionComponent<Props> = ({
+  children,
+  label,
+  ...otherProps
+}) => {
   const { hasToggle, onExpand, setOpenToggle } = useMenuContext()
 
   const ref = React.useRef<HTMLLIElement>(null)

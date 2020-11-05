@@ -72,7 +72,7 @@ const CellButton = styled(Button)<ButtonProps>`
   }}
 `
 
-const TableHeaderCell: React.FC<Props> = ({
+const TableHeaderCell: React.FunctionComponent<Props> = ({
   onClick,
   children,
   title,

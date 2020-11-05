@@ -56,7 +56,7 @@ const overridesCompactTheme: Partial<Theme.ThemeInterface> = {
  * </ThemeProvider>
  *
  */
-const CompactThemeProvider: React.FC<ThemeProviderProps> = ({
+const CompactThemeProvider: React.FunctionComponent<ThemeProviderProps> = ({
   overrides: passedOverrides,
   deep = true,
   children,

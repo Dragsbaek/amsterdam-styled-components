@@ -3,7 +3,7 @@ import ParagraphStyle, { Props } from './ParagraphStyle'
 
 export { Props }
 
-const Paragraph: React.FC<
+const Paragraph: React.FunctionComponent<
   Props & React.HTMLAttributes<HTMLParagraphElement>
 > = ({ children, as, ...otherProps }) => (
   <ParagraphStyle forwardedAs={as} {...otherProps}>

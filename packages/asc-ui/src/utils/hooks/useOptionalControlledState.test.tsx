@@ -84,7 +84,7 @@ describe('useOptionalControlledState', () => {
   })
 
   it('should set the state when the controlled value is changed', () => {
-    const Wrapper: React.FC<any> = ({ open }) => {
+    const Wrapper: React.FunctionComponent<any> = ({ open }) => {
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       const [value] = useOptionalControlledState(open, () => {})
       return <div data-testid="node">{value ? 'open' : ''}</div>

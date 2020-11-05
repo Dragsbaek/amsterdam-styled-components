@@ -36,13 +36,9 @@ export interface Props {
   onPageChange?: (page: number) => void
 }
 
-const CompactPager: React.FC<Props & React.HTMLAttributes<HTMLElement>> = ({
-  page,
-  pageSize,
-  collectionSize,
-  onPageChange,
-  ...otherProps
-}) => {
+const CompactPager: React.FunctionComponent<
+  Props & React.HTMLAttributes<HTMLElement>
+> = ({ page, pageSize, collectionSize, onPageChange, ...otherProps }) => {
   const totalPages = determineTotalPages(collectionSize, pageSize)
   const hasPrevPage = page > 1
   const hasNextPage = page < totalPages

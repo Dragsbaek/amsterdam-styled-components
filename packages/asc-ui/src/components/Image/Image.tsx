@@ -3,7 +3,7 @@ import ImageStyle, { Props as ImageStyleProps } from './ImageStyle'
 
 type Props = ImageStyleProps & React.ImgHTMLAttributes<HTMLImageElement>
 
-const Image: React.FC<Props> = ({ square, ...otherProps }) => (
+const Image: React.FunctionComponent<Props> = ({ square, ...otherProps }) => (
   <ImageStyle
     square={square}
     {...otherProps}

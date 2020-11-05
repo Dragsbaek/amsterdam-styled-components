@@ -16,7 +16,7 @@ type FooterContentProps = {
   title?: string
 } & ShowHideTypes
 
-const ToggleFooterHeader: React.FC<ToggleHandlerProps> = ({
+const ToggleFooterHeader: React.FunctionComponent<ToggleHandlerProps> = ({
   open,
   onClick,
   title,
@@ -31,7 +31,7 @@ const ToggleFooterHeader: React.FC<ToggleHandlerProps> = ({
   </StyledButton>
 )
 
-const FooterSection: React.FC<FooterContentProps> = ({
+const FooterSection: React.FunctionComponent<FooterContentProps> = ({
   title,
   children,
   ...otherProps

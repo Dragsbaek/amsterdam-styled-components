@@ -9,7 +9,7 @@ type Props = {
 } & ContextMenuItemProps &
   React.ButtonHTMLAttributes<HTMLButtonElement>
 
-const ContextMenuItem: React.FC<Props> = ({
+const ContextMenuItem: React.FunctionComponent<Props> = ({
   children,
   icon,
   divider,

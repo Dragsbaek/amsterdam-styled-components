@@ -17,7 +17,7 @@ export type Props = {
   render?: boolean
   ariaLabel?: string
   onOpen?: (open: boolean) => void
-  ToggleHandler?: React.FC<
+  ToggleHandler?: React.FunctionComponent<
     ToggleButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
   >
   rotateOnOpen?: number
@@ -27,7 +27,9 @@ export type Props = {
   BackDropProps
 
 // Todo: refactor this to Collapse component https://github.com/Amsterdam/amsterdam-styled-components/issues/379
-const Toggle: React.FC<Props & HTMLAttributes<HTMLDivElement>> = ({
+const Toggle: React.FunctionComponent<
+  Props & HTMLAttributes<HTMLDivElement>
+> = ({
   children: childrenProps,
   onClick,
   open: openProp,

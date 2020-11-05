@@ -20,7 +20,7 @@ const ButtonStyled = styled(Button)`
   justify-content: center;
 `
 
-const DocumentCoverContentStyle: React.FC<Props> = ({
+const DocumentCoverContentStyle: React.FunctionComponent<Props> = ({
   imageSrc,
   onClick,
   description,

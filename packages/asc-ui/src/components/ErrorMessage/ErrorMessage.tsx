@@ -5,7 +5,7 @@ export interface ErrorMessageProps {
   message: string
 }
 
-const ErrorMessage: React.FC<
+const ErrorMessage: React.FunctionComponent<
   ErrorMessageProps & HTMLAttributes<HTMLDivElement>
 > = ({ message, ...otherProps }) => {
   return (

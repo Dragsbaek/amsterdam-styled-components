@@ -12,7 +12,7 @@ type Props = {
   metaData?: Array<string>
 }
 
-const ViewerContainer: React.FC<Props> = ({
+const ViewerContainer: React.FunctionComponent<Props> = ({
   bottomLeft,
   topLeft,
   topRight,

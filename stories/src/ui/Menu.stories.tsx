@@ -11,7 +11,7 @@ import {
 import React from 'react'
 import styled from 'styled-components'
 
-const ReactRouterLink: React.FC<any> = ({
+const ReactRouterLink: React.FunctionComponent<any> = ({
   children,
   reactRouterProp,
   ...otherProps
@@ -21,7 +21,10 @@ const ReactRouterLink: React.FC<any> = ({
   </a>
 )
 
-const StyledReactRouterLink: React.FC<any> = ({ children, ...otherProps }) => (
+const StyledReactRouterLink: React.FunctionComponent<any> = ({
+  children,
+  ...otherProps
+}) => (
   <MenuButton forwardedAs={ReactRouterLink} {...otherProps}>
     {children}
   </MenuButton>

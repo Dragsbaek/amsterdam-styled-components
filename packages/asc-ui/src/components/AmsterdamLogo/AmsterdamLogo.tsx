@@ -7,7 +7,7 @@ import AmsterdamLogoStyle, {
   LogoTitleStyle,
 } from './AmsterdamLogoStyle'
 
-const AmsterdamLogo: React.FC<LogoProps> = ({
+const AmsterdamLogo: React.FunctionComponent<LogoProps> = ({
   tall,
   title = 'Gemeente Amsterdam',
   ...otherProps

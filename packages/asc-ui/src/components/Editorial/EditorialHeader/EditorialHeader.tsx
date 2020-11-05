@@ -6,7 +6,7 @@ export type Props = {
   title: string
 } & React.HTMLAttributes<HTMLElement>
 
-const EditorialHeader: React.FC<Props> = ({
+const EditorialHeader: React.FunctionComponent<Props> = ({
   title,
   children,
   ...otherProps

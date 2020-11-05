@@ -10,7 +10,7 @@ export type Props = {
 } & StyleProps &
   IconProps
 
-const ToggleHandlerButton: React.FC<Props> = ({
+const ToggleHandlerButton: React.FunctionComponent<Props> = ({
   iconOpen,
   iconClose,
   open,

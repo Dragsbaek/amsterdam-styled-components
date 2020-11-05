@@ -13,7 +13,7 @@ export interface TopTaskLinkProps {
   darkBackground?: boolean
 }
 
-const TopTaskLink: React.FC<
+const TopTaskLink: React.FunctionComponent<
   TopTaskLinkProps & AnchorHTMLAttributes<HTMLAnchorElement>
 > = ({ icon, title, text, ...otherProps }) => {
   const CustomIcon = icon

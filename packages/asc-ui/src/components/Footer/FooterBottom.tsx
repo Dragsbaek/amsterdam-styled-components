@@ -15,7 +15,7 @@ const FooterBottomStyle = styled.div`
   }
 `
 
-const FooterBottom: React.FC = ({ children, ...otherProps }) => (
+const FooterBottom: React.FunctionComponent = ({ children, ...otherProps }) => (
   <Row>
     <FooterBottomStyle {...otherProps}>{children}</FooterBottomStyle>
   </Row>

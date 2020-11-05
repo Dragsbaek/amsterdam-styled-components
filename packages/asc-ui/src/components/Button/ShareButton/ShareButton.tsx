@@ -9,7 +9,7 @@ type Props = {
 } & ShareButtonStyleProps &
   React.HTMLAttributes<HTMLButtonElement>
 
-const ShareButton: React.FC<Props> = ({
+const ShareButton: React.FunctionComponent<Props> = ({
   children,
   onClick,
   iconSize,

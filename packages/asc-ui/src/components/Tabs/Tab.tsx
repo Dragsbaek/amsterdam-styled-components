@@ -9,6 +9,6 @@ export interface TabProps
   label: ReactNode
 }
 
-export const Tab: React.FC<TabProps> = () => {
+export const Tab: React.FunctionComponent<TabProps> = () => {
   return null
 }

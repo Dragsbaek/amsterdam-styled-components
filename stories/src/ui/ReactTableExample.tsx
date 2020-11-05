@@ -26,7 +26,7 @@ import {
 } from 'react-table'
 import styled from 'styled-components'
 
-const DefaultColumnFilter: React.FC<FilterProps<any>> = ({
+const DefaultColumnFilter: React.FunctionComponent<FilterProps<any>> = ({
   column: { filterValue, preFilteredRows, setFilter },
 }) => (
   <input
@@ -38,7 +38,7 @@ const DefaultColumnFilter: React.FC<FilterProps<any>> = ({
   />
 )
 
-const SelectColumnFilter: React.FC<FilterProps<any>> = ({
+const SelectColumnFilter: React.FunctionComponent<FilterProps<any>> = ({
   column: { filterValue, setFilter, preFilteredRows, id },
 }) => {
   const options = React.useMemo(() => {
@@ -87,7 +87,10 @@ type Props = {
   data: any[]
 }
 
-const ReactTableExample: React.FC<Props> = ({ columns, data }) => {
+const ReactTableExample: React.FunctionComponent<Props> = ({
+  columns,
+  data,
+}) => {
   const defaultColumn = React.useMemo(
     () => ({
       minWidth: 30,

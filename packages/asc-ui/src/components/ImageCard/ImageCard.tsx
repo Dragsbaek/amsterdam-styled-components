@@ -5,7 +5,7 @@ import ImageCardStyle, {
   Props,
 } from './ImageCardStyle'
 
-const ImageCard: React.FC<
+const ImageCard: React.FunctionComponent<
   Props & WrapperProps & React.HTMLAttributes<HTMLElement>
 > = ({ children, backgroundImage, margin, ...otherProps }) => (
   <ImageCardWrapperStyle margin={margin}>

@@ -5,7 +5,7 @@ type Props = {
   body?: string
 }
 
-const CustomHTMLBlock: React.FC<Props> = ({
+const CustomHTMLBlock: React.FunctionComponent<Props> = ({
   body,
   children,
   ...otherProps

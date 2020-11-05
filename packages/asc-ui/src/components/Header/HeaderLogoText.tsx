@@ -12,10 +12,10 @@ export interface LogoProps
 interface HeaderLogoTextProps extends React.HTMLAttributes<HTMLHeadingElement> {
   homeLink: string
   tall?: boolean
-  logo?: React.FC<LogoProps>
+  logo?: React.FunctionComponent<LogoProps>
 }
 
-const HeaderLogoText: React.FC<HeaderLogoTextProps> = ({
+const HeaderLogoText: React.FunctionComponent<HeaderLogoTextProps> = ({
   title,
   homeLink,
   tall,

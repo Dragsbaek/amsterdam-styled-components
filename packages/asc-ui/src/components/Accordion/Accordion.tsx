@@ -15,7 +15,7 @@ type Props = {
 } & StyleProps &
   ButtonContentProps
 
-const Accordion: React.FC<
+const Accordion: React.FunctionComponent<
   Props &
     ButtonStyleProps &
     React.ButtonHTMLAttributes<HTMLButtonElement> &

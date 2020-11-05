@@ -20,7 +20,11 @@ type Context = {
 
 const ParentContext = React.createContext<Context>({})
 
-const Column: React.FC<Props> = ({ children, span, ...props }) => {
+const Column: React.FunctionComponent<Props> = ({
+  children,
+  span,
+  ...props
+}) => {
   const { parentSpan } = React.useContext<Context>(ParentContext)
 
   return (

@@ -4,7 +4,9 @@ import usePassPropsToChildren from '../../utils/hooks/usePassPropsToChildren'
 import RadioGroupStyle, { Props } from './RadioGroupStyle'
 import RadioContext from './RadioContext'
 
-const RadioGroup: React.FC<Props & React.HTMLAttributes<HTMLDivElement>> = ({
+const RadioGroup: React.FunctionComponent<
+  Props & React.HTMLAttributes<HTMLDivElement>
+> = ({
   disabled,
   error,
   name,

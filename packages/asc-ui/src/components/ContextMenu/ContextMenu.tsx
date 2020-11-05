@@ -18,7 +18,7 @@ export type Props = {
   open?: boolean
 }
 
-const ContextMenu: React.FC<
+const ContextMenu: React.FunctionComponent<
   Props & React.ButtonHTMLAttributes<HTMLButtonElement>
 > = ({
   className,

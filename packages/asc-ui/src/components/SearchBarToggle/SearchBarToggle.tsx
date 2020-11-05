@@ -16,7 +16,9 @@ interface SearchBarToggleProps extends SearchBarToggleStyleProps, InputMethods {
   searchBarProps?: SearchBarProps
 }
 
-const SearchBarToggle: React.FC<SearchBarToggleProps & ToggleProps> = ({
+const SearchBarToggle: React.FunctionComponent<
+  SearchBarToggleProps & ToggleProps
+> = ({
   children,
   hideAt,
   showAt,

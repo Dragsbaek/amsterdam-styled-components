@@ -8,7 +8,11 @@ type Props = {
 
 const FocusStyle = styled.div``
 
-const Focus: React.FC<Props> = ({ children, onKeyDown, ...otherProps }) => {
+const Focus: React.FunctionComponent<Props> = ({
+  children,
+  onKeyDown,
+  ...otherProps
+}) => {
   const myRef = React.createRef<HTMLDivElement>()
 
   React.useEffect(() => {

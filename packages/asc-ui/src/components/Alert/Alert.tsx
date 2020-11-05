@@ -13,7 +13,9 @@ import AlertStyle, {
 
 const CLOSE_BUTTON_TITLE = 'Sluiten'
 
-const Alert: React.FC<Props & React.HTMLAttributes<HTMLElement>> = ({
+const Alert: React.FunctionComponent<
+  Props & React.HTMLAttributes<HTMLElement>
+> = ({
   children,
   content,
   dismissible,

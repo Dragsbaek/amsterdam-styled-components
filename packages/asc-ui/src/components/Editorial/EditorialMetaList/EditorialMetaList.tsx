@@ -9,7 +9,7 @@ export type Props = {
   fields?: Array<{ id: number; label: string }>
 } & React.HTMLAttributes<HTMLElement>
 
-const EditorialMetaList: React.FC<Props> = ({
+const EditorialMetaList: React.FunctionComponent<Props> = ({
   dateTime,
   dateFormatted,
   fields,

@@ -7,7 +7,7 @@ export type Props = {
   image?: string
 } & React.HTMLAttributes<HTMLElement>
 
-const EditorialPost: React.FC<Props> = ({
+const EditorialPost: React.FunctionComponent<Props> = ({
   children,
   image,
   StyledComponent,

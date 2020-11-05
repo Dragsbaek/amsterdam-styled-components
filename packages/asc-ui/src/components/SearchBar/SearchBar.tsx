@@ -24,7 +24,7 @@ export interface SearchBarProps extends TextFieldProps, SearchBarStyleProps {
   autoFocus?: boolean
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({
+const SearchBar: React.FunctionComponent<SearchBarProps> = ({
   children,
   placeholder,
   onSubmit,

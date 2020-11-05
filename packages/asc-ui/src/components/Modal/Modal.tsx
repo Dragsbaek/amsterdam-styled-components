@@ -16,7 +16,7 @@ export type Props = {
   PortalProps &
   React.HTMLAttributes<HTMLElement>
 
-const Modal: React.FC<Props> = ({
+const Modal: React.FunctionComponent<Props> = ({
   open,
   disablePortal,
   children,
