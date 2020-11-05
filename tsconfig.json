@@ -6,7 +6,6 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "types": [
       "enzyme",
-      "enzyme-adapter-react-16",
       "jest",
       "node",
       "react",
