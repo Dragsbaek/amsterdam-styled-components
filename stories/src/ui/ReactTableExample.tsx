@@ -12,7 +12,8 @@ import {
   TableResizer,
   TableRow,
 } from '@amsterdam/asc-ui'
-import React, { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import * as React from 'react'
 import {
   Column as ColumnType,
   FilterProps,
@@ -26,7 +27,7 @@ import {
 } from 'react-table'
 import styled from 'styled-components'
 
-const DefaultColumnFilter: React.FunctionComponent<FilterProps<any>> = ({
+const DefaultColumnFilter: FunctionComponent<FilterProps<any>> = ({
   column: { filterValue, preFilteredRows, setFilter },
 }) => (
   <input
@@ -38,10 +39,10 @@ const DefaultColumnFilter: React.FunctionComponent<FilterProps<any>> = ({
   />
 )
 
-const SelectColumnFilter: React.FunctionComponent<FilterProps<any>> = ({
+const SelectColumnFilter: FunctionComponent<FilterProps<any>> = ({
   column: { filterValue, setFilter, preFilteredRows, id },
 }) => {
-  const options = React.useMemo(() => {
+  const options = useMemo(() => {
     const opts = new Set()
     preFilteredRows.forEach((row) => {
       opts.add(row.values[id])
@@ -87,11 +88,8 @@ type Props = {
   data: any[]
 }
 
-const ReactTableExample: React.FunctionComponent<Props> = ({
-  columns,
-  data,
-}) => {
-  const defaultColumn = React.useMemo(
+const ReactTableExample: FunctionComponent<Props> = ({ columns, data }) => {
+  const defaultColumn = useMemo(
     () => ({
       minWidth: 30,
       width: 150,
@@ -201,7 +199,7 @@ const ReactTableExample: React.FunctionComponent<Props> = ({
                           <TableResizer
                             {...column.getResizerProps({
                               // This will prevent triggering the sort functionality
-                              onClick(ev: React.MouseEvent) {
+                              onClick(ev: MouseEvent) {
                                 ev.stopPropagation()
                               },
                             })}
@@ -247,7 +245,7 @@ const ReactTableExample: React.FunctionComponent<Props> = ({
 }
 
 function TestComponent() {
-  const columns: ColumnType[] = React.useMemo(
+  const columns: ColumnType[] = useMemo(
     () => [
       {
         Header: 'Naam',

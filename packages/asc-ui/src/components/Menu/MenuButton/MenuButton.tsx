@@ -1,11 +1,11 @@
-import React from 'react'
+import * as React from 'react'
 import MenuButtonStyle, {
   MenuButtonTextStyle,
   MenuButtonTextWrapperStyle,
   Props,
 } from './MenuButtonStyle'
 
-const MenuButton: React.FunctionComponent<Props> = ({
+const MenuButton: FunctionComponent<Props> = ({
   children,
   as,
   ...otherProps

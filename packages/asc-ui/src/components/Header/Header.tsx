@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import HeaderStyle, { Props as HeaderStyleProps } from './HeaderStyle'
 import HeaderWrapperStyle, {
   Props as HeaderWrapperProps,
@@ -13,15 +13,15 @@ type Props = {
   tall?: boolean
   homeLink: string
   title?: string
-  navigation?: React.ReactNode
-  links?: React.ReactNode
-  logo?: React.FunctionComponent<LogoProps>
+  navigation?: ReactNode
+  links?: ReactNode
+  logo?: FunctionComponent<LogoProps>
 } & HeaderWrapperProps &
   HeaderStyleProps &
   CustomCssPropsType &
-  React.HTMLAttributes<HTMLDivElement>
+  HTMLAttributes<HTMLDivElement>
 
-const Header: React.FunctionComponent<Props> = ({
+const Header: FunctionComponent<Props> = ({
   css,
   title,
   homeLink,

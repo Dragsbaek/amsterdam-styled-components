@@ -1,9 +1,9 @@
-import React from 'react'
+import * as React from 'react'
 import TagStyle, { Props as TagStyleProps } from './TagStyle'
 
-export type Props = TagStyleProps & React.HTMLAttributes<HTMLSpanElement>
+export type Props = TagStyleProps & HTMLAttributes<HTMLSpanElement>
 
-const Tag: React.FunctionComponent<Props> = ({ children, ...otherProps }) => (
+const Tag: FunctionComponent<Props> = ({ children, ...otherProps }) => (
   <TagStyle {...otherProps}>{children}</TagStyle>
 )
 

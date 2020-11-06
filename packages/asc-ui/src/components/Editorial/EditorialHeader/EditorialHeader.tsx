@@ -1,12 +1,12 @@
-import React from 'react'
+import * as React from 'react'
 import EditorialHeaderStyle from './EditorialHeaderStyle'
 import Heading from '../../Heading/Heading'
 
 export type Props = {
   title: string
-} & React.HTMLAttributes<HTMLElement>
+} & HTMLAttributes<HTMLElement>
 
-const EditorialHeader: React.FunctionComponent<Props> = ({
+const EditorialHeader: FunctionComponent<Props> = ({
   title,
   children,
   ...otherProps

@@ -1,9 +1,9 @@
-import React from 'react'
+import * as React from 'react'
 import ImageStyle, { Props as ImageStyleProps } from './ImageStyle'
 
-type Props = ImageStyleProps & React.ImgHTMLAttributes<HTMLImageElement>
+type Props = ImageStyleProps & ImgHTMLAttributes<HTMLImageElement>
 
-const Image: React.FunctionComponent<Props> = ({ square, ...otherProps }) => (
+const Image: FunctionComponent<Props> = ({ square, ...otherProps }) => (
   <ImageStyle
     square={square}
     {...otherProps}

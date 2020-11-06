@@ -1,5 +1,6 @@
 import { ChevronDown, ChevronUp } from '@amsterdam/asc-assets'
-import React, { useCallback, useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
+import * as React from 'react'
 import { KeyboardKeys } from '../../../types/index'
 import useDebounce from '../../../utils/hooks/useDebounce'
 import useEdgeDetection from '../../../utils/hooks/useEdgeDetection'
@@ -14,16 +15,16 @@ type Props = {
   label: string
 } & MenuFlyOutProps
 
-const MenuFlyOut: React.FunctionComponent<Props> = ({
+const MenuFlyOut: FunctionComponent<Props> = ({
   children,
   label,
   ...otherProps
 }) => {
   const { hasToggle, onExpand, setOpenToggle } = useMenuContext()
 
-  const ref = React.useRef<HTMLLIElement>(null)
+  const ref = useRef<HTMLLIElement>(null)
 
-  const [menuOpen, setMenuOpen] = React.useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const setOpen = useDebounce(setMenuOpen, 0)
 
@@ -47,13 +48,13 @@ const MenuFlyOut: React.FunctionComponent<Props> = ({
     }
   }, [onKeyDownEventHandler])
 
-  const onHandleOpen = (e: React.MouseEvent | React.KeyboardEvent) => {
+  const onHandleOpen = (e: MouseEvent | KeyboardEvent) => {
     e.preventDefault()
 
     setOpen(!menuOpen)
   }
 
-  const onHandleKeyDownButton = (event: React.KeyboardEvent) => {
+  const onHandleKeyDownButton = (event: KeyboardEvent) => {
     if (event.key === KeyboardKeys.Enter || event.key === KeyboardKeys.Space) {
       onHandleOpen(event)
     }
@@ -82,13 +83,13 @@ const MenuFlyOut: React.FunctionComponent<Props> = ({
     { top: false, right: true, bottom: false, left: true },
   )
 
-  const handleOnExpand = React.useCallback(
+  const handleOnExpand = useCallback(
     (open) => onExpand && onExpand(open),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   )
 
-  React.useEffect(() => {
+  useEffect(() => {
     handleOnExpand(menuOpen)
   }, [menuOpen, handleOnExpand])
 

@@ -1,4 +1,5 @@
-import React, { HTMLAttributes } from 'react'
+import { HTMLAttributes } from 'react'
+import * as React from 'react'
 import ToggleStyle, { Props as ToggleStyleProps } from './ToggleStyle'
 import ownerDocument from '../../utils/ownerDocument'
 import usePassPropsToChildren from '../../utils/hooks/usePassPropsToChildren'
@@ -9,27 +10,25 @@ import ToggleButton, {
 import BackDrop, { Props as BackDropProps } from '../BackDrop/BackDrop'
 
 export type ToggleHandlerProps = {
-  as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
+  as?: keyof JSX.IntrinsicElements | ComponentType<any>
 } & ToggleButtonProps &
-  React.HTMLAttributes<HTMLElement>
+  HTMLAttributes<HTMLElement>
 
 export type Props = {
   render?: boolean
   ariaLabel?: string
   onOpen?: (open: boolean) => void
-  ToggleHandler?: React.FunctionComponent<
-    ToggleButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
+  ToggleHandler?: FunctionComponent<
+    ToggleButtonProps & ButtonHTMLAttributes<HTMLButtonElement>
   >
   rotateOnOpen?: number
-  as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
+  as?: keyof JSX.IntrinsicElements | ComponentType<any>
 } & ToggleStyleProps &
   ToggleHandlerProps &
   BackDropProps
 
 // Todo: refactor this to Collapse component https://github.com/Amsterdam/amsterdam-styled-components/issues/379
-const Toggle: React.FunctionComponent<
-  Props & HTMLAttributes<HTMLDivElement>
-> = ({
+const Toggle: FunctionComponent<Props & HTMLAttributes<HTMLDivElement>> = ({
   children: childrenProps,
   onClick,
   open: openProp,
@@ -47,9 +46,9 @@ const Toggle: React.FunctionComponent<
   ariaLabel,
   ...otherProps
 }) => {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = useState(false)
 
-  const handleOnOpen = React.useCallback(
+  const handleOnOpen = useCallback(
     (openParam: boolean) => {
       setOpen(openParam)
 
@@ -65,7 +64,7 @@ const Toggle: React.FunctionComponent<
   const { onKeyDown: onKeyDownHook } = useActionOnEscape(() =>
     handleOnOpen(false),
   )
-  const ref = React.useRef<HTMLDivElement>(null!)
+  const ref = useRef<HTMLDivElement>(null!)
 
   const handleOnBlur = () => {
     setTimeout(() => {
@@ -79,14 +78,14 @@ const Toggle: React.FunctionComponent<
     })
   }
 
-  const handleOnKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+  const handleOnKeyDown = (e: KeyboardEvent<HTMLElement>) => {
     onKeyDownHook(e)
     if (onKeyDown) {
       onKeyDown(e)
     }
   }
 
-  const handleOnClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+  const handleOnClick = (e: MouseEvent<HTMLElement, MouseEvent>) => {
     handleOnOpen(!open)
 
     if (onClick) {
@@ -99,7 +98,7 @@ const Toggle: React.FunctionComponent<
   })
 
   // Useful if parent needs to take over control the isOpen state
-  React.useEffect(() => {
+  useEffect(() => {
     if (typeof openProp !== 'undefined') {
       handleOnOpen(openProp)
     }

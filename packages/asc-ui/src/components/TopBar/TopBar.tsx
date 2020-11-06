@@ -1,11 +1,10 @@
-import React from 'react'
+import * as React from 'react'
 import TopBarStyle, { Props as TopBarStyleProps } from './TopBarStyle'
 
 type Props = TopBarStyleProps
 
-const TopBar: React.FunctionComponent<Props> = ({
-  children,
-  ...otherProps
-}) => <TopBarStyle {...otherProps}>{children}</TopBarStyle>
+const TopBar: FunctionComponent<Props> = ({ children, ...otherProps }) => (
+  <TopBarStyle {...otherProps}>{children}</TopBarStyle>
+)
 
 export default TopBar

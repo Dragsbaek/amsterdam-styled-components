@@ -52,7 +52,7 @@ declare module '*.eot' {
 declare module '*.svg' {
   import * as React from 'react'
 
-  export const ReactComponent: React.SFC<React.SVGProps<SVGSVGElement>>
+  export const ReactComponent: SFC<SVGProps<SVGSVGElement>>
 
   const src: string
   export default src

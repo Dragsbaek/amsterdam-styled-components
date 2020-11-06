@@ -1,15 +1,15 @@
-import React from 'react'
+import * as React from 'react'
 import ContextMenuItemStyle, {
   ContextMenuItemButton,
   ContextMenuItemProps,
 } from './ContextMenuItemStyle'
 
 type Props = {
-  icon?: React.ReactNode
+  icon?: ReactNode
 } & ContextMenuItemProps &
-  React.ButtonHTMLAttributes<HTMLButtonElement>
+  ButtonHTMLAttributes<HTMLButtonElement>
 
-const ContextMenuItem: React.FunctionComponent<Props> = ({
+const ContextMenuItem: FunctionComponent<Props> = ({
   children,
   icon,
   divider,

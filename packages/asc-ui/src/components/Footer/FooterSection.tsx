@@ -1,5 +1,5 @@
 import { ChevronDown } from '@amsterdam/asc-assets'
-import React from 'react'
+import * as React from 'react'
 import { ShowHideTypes } from '../../utils'
 import Hidden from '../Hidden'
 import Icon from '../Icon/Icon'
@@ -16,7 +16,7 @@ type FooterContentProps = {
   title?: string
 } & ShowHideTypes
 
-const ToggleFooterHeader: React.FunctionComponent<ToggleHandlerProps> = ({
+const ToggleFooterHeader: FunctionComponent<ToggleHandlerProps> = ({
   open,
   onClick,
   title,
@@ -31,7 +31,7 @@ const ToggleFooterHeader: React.FunctionComponent<ToggleHandlerProps> = ({
   </StyledButton>
 )
 
-const FooterSection: React.FunctionComponent<FooterContentProps> = ({
+const FooterSection: FunctionComponent<FooterContentProps> = ({
   title,
   children,
   ...otherProps

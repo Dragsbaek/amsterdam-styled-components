@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import ModalStyle, { ModalStyleContainer, ModalFocus } from './ModalStyle'
 import { KeyboardKeys } from '../../types'
 import useTrappedFocus from '../../utils/hooks/useTrappedFocus'
@@ -14,9 +14,9 @@ export type Props = {
   blurredNodeSelector?: string
 } & BackDropProps &
   PortalProps &
-  React.HTMLAttributes<HTMLElement>
+  HTMLAttributes<HTMLElement>
 
-const Modal: React.FunctionComponent<Props> = ({
+const Modal: FunctionComponent<Props> = ({
   open,
   disablePortal,
   children,
@@ -27,10 +27,10 @@ const Modal: React.FunctionComponent<Props> = ({
   onClose,
   ...otherProps
 }) => {
-  const ref = React.useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
   const { keyDown } = useTrappedFocus(ref)
 
-  React.useEffect(() => {
+  useEffect(() => {
     let renderedTimer = 0
     const { current: node } = ref
     if (node) {
@@ -50,7 +50,7 @@ const Modal: React.FunctionComponent<Props> = ({
       onClose()
     }
   }
-  const handleKeyDown = (event: React.KeyboardEvent) => {
+  const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === KeyboardKeys.Escape) {
       event.stopPropagation()
       handleClose()
@@ -58,7 +58,7 @@ const Modal: React.FunctionComponent<Props> = ({
   }
 
   // React createPortal is not supported for SSR
-  const Wrapper = disablePortal ? React.Fragment : Portal
+  const Wrapper = disablePortal ? Fragment : Portal
 
   return open ? (
     <Wrapper

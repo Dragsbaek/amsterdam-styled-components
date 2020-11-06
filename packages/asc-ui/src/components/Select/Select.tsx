@@ -1,10 +1,11 @@
-import React, {
+import {
   useCallback,
   useEffect,
   useImperativeHandle,
   useRef,
   useState,
 } from 'react'
+import * as React from 'react'
 import FormLabelStyle from '../FormLabelStyle'
 import SelectStyle, {
   AbsoluteContentWrapper,
@@ -24,13 +25,13 @@ function getSelectedOptions(select: HTMLSelectElement) {
     return Array.from(select.selectedOptions)
   }
 
-  // The 'selectedOptions' property is not supported (IE11)
+  // The 'edOptions' property is not supported (IE11)
   return Array.from(select.querySelectorAll<HTMLOptionElement>(':checked'))
 }
 
-const Select = React.forwardRef<
+const Select = forwardRef<
   HTMLSelectElement,
-  Props & React.HTMLAttributes<HTMLSelectElement>
+  Props & HTMLAttributes<HTMLSelectElement>
 >(
   (
     {
@@ -56,13 +57,13 @@ const Select = React.forwardRef<
         select,
       )[0]
 
-      if (selectedOption?.textContent) {
+      if (seletion?.textContent) {
         setSelectedValue(selectedOption.textContent)
       }
     }, [])
 
     const handleChange = useCallback(
-      (event: React.ChangeEvent<HTMLSelectElement>) => {
+      (event: ChangeEvent<HTMLSelectElement>) => {
         updateValue(event.target)
 
         if (onChange) {

@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
 import {
   Header,
@@ -19,9 +20,9 @@ Given the `tall={false}` prop, this will make sure the header is not showing its
 
 <Preview>
   <Story name="Short only">
-    <React.Fragment>
+    <Fragment>
       <Header tall={false} title="Some title" fullWidth={false} />
-    </React.Fragment>
+    </Fragment>
   </Story>
 </Preview>
 
@@ -29,9 +30,9 @@ Given the `tall={false}` prop, this will make sure the header is not showing its
 
 <Preview>
   <Story name="Full width">
-    <React.Fragment>
+    <Fragment>
       <Header tall={false} title="Some title" fullWidth />
-    </React.Fragment>
+    </Fragment>
   </Story>
 </Preview>
 
@@ -41,9 +42,9 @@ To see the tall version, please make sure your viewport is bigger than laptopM (
 
 <Preview>
   <Story name="Tall">
-    <React.Fragment>
+    <Fragment>
       <Header tall title="Some title" fullWidth={false} />
-    </React.Fragment>
+    </Fragment>
   </Story>
 </Preview>
 
@@ -51,7 +52,7 @@ To see the tall version, please make sure your viewport is bigger than laptopM (
 
 <Preview>
   <Story name="Custom navigation component">
-    <React.Fragment>
+    <Fragment>
       <Header
         tall
         title="Some title"
@@ -72,6 +73,6 @@ To see the tall version, please make sure your viewport is bigger than laptopM (
           </MenuInline>
         }
       />
-    </React.Fragment>
+    </Fragment>
   </Story>
 </Preview>

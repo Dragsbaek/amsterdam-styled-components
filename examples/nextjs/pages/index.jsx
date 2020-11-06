@@ -1,6 +1,5 @@
 import { Close } from '@amsterdam/asc-assets'
 import { Button, Header, Typography } from '@amsterdam/asc-ui'
-import React from 'react'
 
 export default function Home() {
   return (

@@ -1,10 +1,13 @@
-import React, { HTMLAttributes } from 'react'
+import { HTMLAttributes } from 'react'
+import * as React from 'react'
 import BackDropStyle, { Props } from './BackDropStyle'
 
-const BackDrop: React.FunctionComponent<
-  Props & HTMLAttributes<HTMLDivElement>
-> = ({ backdropOpacity, onClick, ...otherProps }) => {
-  const handleOnClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+const BackDrop: FunctionComponent<Props & HTMLAttributes<HTMLDivElement>> = ({
+  backdropOpacity,
+  onClick,
+  ...otherProps
+}) => {
+  const handleOnClick = (e: MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (onClick) {
       onClick(e)
     }

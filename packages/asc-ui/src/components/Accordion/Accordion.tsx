@@ -1,5 +1,13 @@
 import { ChevronDown } from '@amsterdam/asc-assets'
-import React, { useCallback, useEffect, useState } from 'react'
+import {
+  useCallback,
+  useEffect,
+  useState,
+  FunctionComponent,
+  ButtonHTMLAttributes,
+  AnchorHTMLAttributes,
+} from 'react'
+import * as React from 'react'
 import { useUID } from 'react-uid'
 import { ButtonStyleProps } from '../Button/ButtonStyle'
 import {
@@ -15,11 +23,11 @@ type Props = {
 } & StyleProps &
   ButtonContentProps
 
-const Accordion: React.FunctionComponent<
+const Accordion: FunctionComponent<
   Props &
     ButtonStyleProps &
-    React.ButtonHTMLAttributes<HTMLButtonElement> &
-    React.AnchorHTMLAttributes<HTMLAnchorElement>
+    ButtonHTMLAttributes<HTMLButtonElement> &
+    AnchorHTMLAttributes<HTMLAnchorElement>
 > = ({
   children,
   title,

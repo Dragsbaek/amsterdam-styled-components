@@ -1,9 +1,12 @@
-import React from 'react'
+import * as React from 'react'
 import { ContainerStyle, ContainerWrapperStyle, Props } from './ContainerStyle'
 
-const Container: React.FunctionComponent<
-  Props & React.HTMLAttributes<HTMLDivElement>
-> = ({ beamColor, maxWidth, children, ...otherProps }) => (
+const Container: FunctionComponent<Props & HTMLAttributes<HTMLDivElement>> = ({
+  beamColor,
+  maxWidth,
+  children,
+  ...otherProps
+}) => (
   <ContainerWrapperStyle>
     <ContainerStyle beamColor={beamColor} maxWidth={maxWidth} {...otherProps}>
       {children}

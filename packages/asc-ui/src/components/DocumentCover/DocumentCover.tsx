@@ -1,5 +1,5 @@
 import { Download } from '@amsterdam/asc-assets'
-import React from 'react'
+import * as React from 'react'
 import styled from 'styled-components'
 import Button from '../Button'
 import Image from '../Image'
@@ -8,9 +8,7 @@ import DocumentCoverStyle from './DocumentCoverStyle'
 
 type Props = {
   imageSrc: string
-  onClick: (
-    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
-  ) => void
+  onClick: (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void
   description: string
   alt?: string
 }
@@ -20,7 +18,7 @@ const ButtonStyled = styled(Button)`
   justify-content: center;
 `
 
-const DocumentCoverContentStyle: React.FunctionComponent<Props> = ({
+const DocumentCoverContentStyle: FunctionComponent<Props> = ({
   imageSrc,
   onClick,
   description,

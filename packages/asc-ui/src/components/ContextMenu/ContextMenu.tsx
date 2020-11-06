@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import * as React from 'react'
 import ContextMenuButtonStyle from './ContextMenuButton'
 import MenuList from './ContextMenuList'
 import ownerDocument from '../../utils/ownerDocument'
@@ -12,14 +13,14 @@ import { deprecatedWarning } from '../../utils'
 export type Props = {
   position?: Position
   label?: string
-  icon?: React.ReactNode
-  arrowIcon?: React.ReactNode
-  selectElementForTouchScreen?: React.ReactNode
+  icon?: ReactNode
+  arrowIcon?: ReactNode
+  selectElementForTouchScreen?: ReactNode
   open?: boolean
 }
 
-const ContextMenu: React.FunctionComponent<
-  Props & React.ButtonHTMLAttributes<HTMLButtonElement>
+const ContextMenu: FunctionComponent<
+  Props & ButtonHTMLAttributes<HTMLButtonElement>
 > = ({
   className,
   open: openProp = false,
@@ -29,12 +30,12 @@ const ContextMenu: React.FunctionComponent<
   selectElementForTouchScreen,
   ...otherProps
 }) => {
-  const ref = React.useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
   const [open, setOpen] = useState(openProp)
   const isTouchScreen = useDetectTouchscreen()
 
   useEffect(() => {
-    React.Children.toArray(children).forEach((child) => {
+    Children.toArray(children).forEach((child) => {
       // @ts-ignore
       if (child && child.type !== ContextMenuItem) {
         deprecatedWarning(

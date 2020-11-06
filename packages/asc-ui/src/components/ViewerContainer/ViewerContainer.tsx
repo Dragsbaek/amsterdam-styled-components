@@ -1,18 +1,18 @@
-import React from 'react'
+import * as React from 'react'
 import {
   ViewerContainerItem,
   ViewerContainerWrapper,
 } from './ViewerContainerStyle'
 
 type Props = {
-  topLeft?: React.ReactNode
-  topRight?: React.ReactNode
-  bottomLeft?: React.ReactNode
-  bottomRight?: React.ReactNode
+  topLeft?: ReactNode
+  topRight?: ReactNode
+  bottomLeft?: ReactNode
+  bottomRight?: ReactNode
   metaData?: Array<string>
 }
 
-const ViewerContainer: React.FunctionComponent<Props> = ({
+const ViewerContainer: FunctionComponent<Props> = ({
   bottomLeft,
   topLeft,
   topRight,

@@ -1,11 +1,11 @@
-import React from 'react'
+import * as React from 'react'
 import MenuList from '../MenuList/MenuList'
 import MenuContext from '../MenuContext'
 import MenuToggleStyle, { Props } from './MenuToggleStyle'
 import Toggle from '../../Toggle/Toggle'
 import useOptionalControlledState from '../../../utils/hooks/useOptionalControlledState'
 
-const MenuToggle: React.FunctionComponent<Props> = ({
+const MenuToggle: FunctionComponent<Props> = ({
   children,
   onExpand,
   align = 'left',

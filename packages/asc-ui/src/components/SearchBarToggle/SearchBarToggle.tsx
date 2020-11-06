@@ -1,5 +1,5 @@
 import { Search } from '@amsterdam/asc-assets'
-import React from 'react'
+import * as React from 'react'
 import { InputMethods, InputProps } from '../Input'
 import SearchBar from '../SearchBar'
 import { SearchBarProps } from '../SearchBar/SearchBar'
@@ -16,7 +16,7 @@ interface SearchBarToggleProps extends SearchBarToggleStyleProps, InputMethods {
   searchBarProps?: SearchBarProps
 }
 
-const SearchBarToggle: React.FunctionComponent<
+const SearchBarToggle: FunctionComponent<
   SearchBarToggleProps & ToggleProps
 > = ({
   children,

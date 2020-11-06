@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { getByText, render } from '@testing-library/react'
 import {
   act,
@@ -9,7 +9,7 @@ import useOptionalControlledState from './useOptionalControlledState'
 
 describe('useOptionalControlledState', () => {
   const mockFn: jest.Mock = jest.fn()
-  const ref: React.Ref<HTMLButtonElement> = React.createRef()
+  const ref: Ref<HTMLButtonElement> = createRef()
 
   beforeEach(() => {
     render(
@@ -84,7 +84,7 @@ describe('useOptionalControlledState', () => {
   })
 
   it('should set the state when the controlled value is changed', () => {
-    const Wrapper: React.FunctionComponent<any> = ({ open }) => {
+    const Wrapper: FunctionComponent<any> = ({ open }) => {
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       const [value] = useOptionalControlledState(open, () => {})
       return <div data-testid="node">{value ? 'open' : ''}</div>

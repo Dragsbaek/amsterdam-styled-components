@@ -1,4 +1,4 @@
-import React from 'react'
+import { useRef } from 'react'
 import { getByTestId, render } from '@testing-library/react'
 import useTrappedFocus from './useTrappedFocus'
 import { KeyboardKeys } from '../../types'
@@ -12,7 +12,7 @@ describe('useTrappedFocus', () => {
 
   beforeEach(() => {
     const Component = () => {
-      const ref: any = React.useRef()
+      const ref: any = useRef()
       ;({ keyDown } = useTrappedFocus(ref))
 
       return (

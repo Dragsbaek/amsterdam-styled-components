@@ -1,9 +1,10 @@
-import React from 'react'
+import * as React from 'react'
 import ListStyle, { Props } from './ListStyle'
 
-const List: React.FunctionComponent<
-  Props & React.HTMLAttributes<HTMLUListElement>
-> = ({ children, ...otherProps }) => {
+const List: FunctionComponent<Props & HTMLAttributes<HTMLUListElement>> = ({
+  children,
+  ...otherProps
+}) => {
   return <ListStyle {...otherProps}>{children}</ListStyle>
 }
 

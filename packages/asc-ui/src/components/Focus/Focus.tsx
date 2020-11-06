@@ -1,21 +1,21 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-import React from 'react'
+import * as React from 'react'
 import styled from 'styled-components'
 
 type Props = {
-  onKeyDown?: React.EventHandler<React.KeyboardEvent>
+  onKeyDown?: EventHandler<KeyboardEvent>
 }
 
 const FocusStyle = styled.div``
 
-const Focus: React.FunctionComponent<Props> = ({
+const Focus: FunctionComponent<Props> = ({
   children,
   onKeyDown,
   ...otherProps
 }) => {
-  const myRef = React.createRef<HTMLDivElement>()
+  const myRef = createRef<HTMLDivElement>()
 
-  React.useEffect(() => {
+  useEffect(() => {
     let renderedTimer = 0
     const { current: node } = myRef
     if (node) {

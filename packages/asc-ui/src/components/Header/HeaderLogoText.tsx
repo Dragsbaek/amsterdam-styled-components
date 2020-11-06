@@ -1,21 +1,20 @@
-import React from 'react'
+import * as React from 'react'
 import HeaderLogoTextStyle from './HeaderLogoTextStyle'
 import HeaderTitle from './HeaderTitle'
 
-export interface LogoProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface LogoProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string
   tall?: boolean
   title?: string
 }
 
-interface HeaderLogoTextProps extends React.HTMLAttributes<HTMLHeadingElement> {
+interface HeaderLogoTextProps extends HTMLAttributes<HTMLHeadingElement> {
   homeLink: string
   tall?: boolean
-  logo?: React.FunctionComponent<LogoProps>
+  logo?: FunctionComponent<LogoProps>
 }
 
-const HeaderLogoText: React.FunctionComponent<HeaderLogoTextProps> = ({
+const HeaderLogoText: FunctionComponent<HeaderLogoTextProps> = ({
   title,
   homeLink,
   tall,

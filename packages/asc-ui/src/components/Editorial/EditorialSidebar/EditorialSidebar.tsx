@@ -1,10 +1,9 @@
-import React from 'react'
+import * as React from 'react'
 import EditorialSidebarStyle from './EditorialSidebarStyle'
 
-const EditorialContent: React.FunctionComponent<React.HTMLAttributes<
-  HTMLElement
->> = ({ children, ...otherProps }) => (
-  <EditorialSidebarStyle {...otherProps}>{children}</EditorialSidebarStyle>
-)
+const EditorialContent: FunctionComponent<HTMLAttributes<HTMLElement>> = ({
+  children,
+  ...otherProps
+}) => <EditorialSidebarStyle {...otherProps}>{children}</EditorialSidebarStyle>
 
 export default EditorialContent

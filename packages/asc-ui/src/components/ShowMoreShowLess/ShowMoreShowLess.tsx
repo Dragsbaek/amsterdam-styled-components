@@ -1,12 +1,20 @@
 import { Enlarge, Minimise } from '@amsterdam/asc-assets'
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import {
+  FunctionComponent,
+  HTMLAttributes,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
+import * as React from 'react'
 import Button, { ButtonProps } from '../Button/Button'
 import ShowMoreShowLessStyle, {
   ShowMoreShowLessProps,
 } from './ShowMoreShowLessStyle'
 
-const ShowMoreShowLess: React.FunctionComponent<
-  ShowMoreShowLessProps & React.HTMLAttributes<HTMLElement>
+const ShowMoreShowLess: FunctionComponent<
+  ShowMoreShowLessProps & HTMLAttributes<HTMLElement>
 > = ({
   children,
   maxHeight = '300px',
